@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A7AC75F31F6420AC00B2C0F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC75F21F6420AC00B2C0F8 /* AppDelegate.swift */; };
-		A7AC75F51F6420AC00B2C0F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC75F41F6420AC00B2C0F8 /* ViewController.swift */; };
 		A7AC75F81F6420AC00B2C0F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AC75F61F6420AC00B2C0F8 /* Main.storyboard */; };
 		A7AC75FA1F6420AC00B2C0F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7AC75F91F6420AC00B2C0F8 /* Assets.xcassets */; };
 		A7AC75FD1F6420AC00B2C0F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AC75FB1F6420AC00B2C0F8 /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		A7AC75EF1F6420AC00B2C0F8 /* Roshambo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roshambo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7AC75F21F6420AC00B2C0F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A7AC75F41F6420AC00B2C0F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A7AC75F71F6420AC00B2C0F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7AC75F91F6420AC00B2C0F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7AC75FC1F6420AC00B2C0F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,29 @@
 		A7AC75F11F6420AC00B2C0F8 /* Roshambo */ = {
 			isa = PBXGroup;
 			children = (
+				A7AC76051F6421CD00B2C0F8 /* Assets */,
+				A7AC76041F6421C000B2C0F8 /* Storyboards */,
 				A7AC75F21F6420AC00B2C0F8 /* AppDelegate.swift */,
-				A7AC75F41F6420AC00B2C0F8 /* ViewController.swift */,
-				A7AC75F61F6420AC00B2C0F8 /* Main.storyboard */,
-				A7AC75F91F6420AC00B2C0F8 /* Assets.xcassets */,
-				A7AC75FB1F6420AC00B2C0F8 /* LaunchScreen.storyboard */,
 				A7AC75FE1F6420AC00B2C0F8 /* Info.plist */,
 			);
 			path = Roshambo;
+			sourceTree = "<group>";
+		};
+		A7AC76041F6421C000B2C0F8 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A7AC75FB1F6420AC00B2C0F8 /* LaunchScreen.storyboard */,
+				A7AC75F61F6420AC00B2C0F8 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A7AC76051F6421CD00B2C0F8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				A7AC75F91F6420AC00B2C0F8 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +149,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7AC75F51F6420AC00B2C0F8 /* ViewController.swift in Sources */,
 				A7AC75F31F6420AC00B2C0F8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
