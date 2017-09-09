@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Choose Player View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ChoosePlayerViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-UW-wxI">
                                                 <rect key="frame" x="62.5" y="0.0" width="75" height="65"/>
                                                 <state key="normal" image="paper"/>
+                                                <connections>
+                                                    <action selector="paperButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OE6-dH-wOU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -35,10 +38,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9Y-fc-tzr">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="65"/>
                                                 <state key="normal" image="rock"/>
+                                                <connections>
+                                                    <action selector="rockButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhm-nj-zac"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKY-qa-CA5">
                                                 <rect key="frame" x="125" y="0.0" width="75" height="65"/>
                                                 <state key="normal" image="scissors"/>
+                                                <connections>
+                                                    <segue destination="NDy-2l-GAH" kind="show" id="Bi9-BB-Tuw"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -69,14 +78,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="NDy-2l-GAH" kind="show" identifier="resultViewControllerSegue" id="6Q3-t9-lq4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="76" y="42"/>
         </scene>
-        <!--View Controller-->
+        <!--Battle Result View Controller-->
         <scene sceneID="eUV-u4-yWm">
             <objects>
-                <viewController id="NDy-2l-GAH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BattleResultViewController" id="NDy-2l-GAH" customClass="BattleResultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mrR-Si-nbf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,6 +118,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVH-sm-XPM">
                                         <rect key="frame" x="0.0" y="0.0" width="71" height="40"/>
                                         <state key="normal" title="Play Again"/>
+                                        <connections>
+                                            <action selector="playAgainPressed:" destination="NDy-2l-GAH" eventType="touchUpInside" id="JbS-qX-bwh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -135,4 +151,7 @@
         <image name="rock" width="75" height="65"/>
         <image name="scissors" width="75" height="65"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bi9-BB-Tuw"/>
+    </inferredMetricsTieBreakers>
 </document>
