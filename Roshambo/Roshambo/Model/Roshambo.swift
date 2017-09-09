@@ -46,7 +46,7 @@ struct Roshambo {
         }
         
         let winner = defineWinner(with: playerA, playerB: playerB)
-        return ("\(winner.rawValue) wins \(winner == playerA ? playerB.rawValue : playerA.rawValue)", winner.rawValue)
+        return ("\(winner.rawValue) wins \(winner == playerA ? playerB.rawValue : playerA.rawValue), you're \(playerB.rawValue)", winner.rawValue)
     }
     
 }

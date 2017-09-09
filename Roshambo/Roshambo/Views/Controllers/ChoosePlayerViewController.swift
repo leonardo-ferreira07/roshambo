@@ -21,18 +21,28 @@ class ChoosePlayerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "resultViewControllerSegue" {
+            if let resultVC = segue.destination as? BattleResultViewController {
+                _ = configureNextVC(with: .paper, viewController: resultVC)
+            }
+        } else {
+            if let resultVC = segue.destination as? BattleResultViewController {
+                _ = configureNextVC(with: .scissor, viewController: resultVC)
+            }
+        }
+    }
 
     // MARK: - Actions
     
     @IBAction func rockButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let resultVC = storyboard.instantiateViewController(withIdentifier: "BattleResultViewController") as? BattleResultViewController {
-            let tupple = Roshambo.winnerMessage(with: Roshambo.generateRandomPlayer(), playerB: .rock)
+            let controller = configureNextVC(with: .rock, viewController: resultVC)
             
-            resultVC.winnerMessage = tupple.0
-            resultVC.winnerImageName = tupple.1
-        
-            present(resultVC, animated: true, completion: nil)
+            present(controller, animated: true, completion: nil)
         }
     }
     
@@ -41,4 +51,17 @@ class ChoosePlayerViewController: UIViewController {
     }
     
 
+}
+
+// MARK: - ViewController
+
+extension ChoosePlayerViewController {
+    func configureNextVC(with player: PlayerType, viewController: BattleResultViewController) -> BattleResultViewController {
+        let tupple = Roshambo.winnerMessage(with: Roshambo.generateRandomPlayer(), playerB: player)
+        
+        viewController.winnerMessage = tupple.0
+        viewController.winnerImageName = tupple.1
+        
+        return viewController
+    }
 }
