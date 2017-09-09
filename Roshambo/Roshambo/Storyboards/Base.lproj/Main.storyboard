@@ -25,7 +25,7 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-UW-wxI">
                                                 <rect key="frame" x="62.5" y="0.0" width="75" height="65"/>
-                                                <state key="normal" image="paper"/>
+                                                <state key="normal" image="paperIcon"/>
                                                 <connections>
                                                     <action selector="paperButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OE6-dH-wOU"/>
                                                 </connections>
@@ -37,14 +37,14 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9Y-fc-tzr">
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="65"/>
-                                                <state key="normal" image="rock"/>
+                                                <state key="normal" image="rockIcon"/>
                                                 <connections>
                                                     <action selector="rockButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhm-nj-zac"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKY-qa-CA5">
                                                 <rect key="frame" x="125" y="0.0" width="75" height="65"/>
-                                                <state key="normal" image="scissors"/>
+                                                <state key="normal" image="scissorsIcon"/>
                                                 <connections>
                                                     <segue destination="NDy-2l-GAH" kind="show" id="Bi9-BB-Tuw"/>
                                                 </connections>
@@ -94,14 +94,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="oy5-WK-Fxb">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="oy5-WK-Fxb">
                                 <rect key="frame" x="67.5" y="236.5" width="240" height="240.5"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4b-8G-9OH">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
-                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z7P-Zo-QfR">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4b-8G-9OH">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="fLY-g1-h3M"/>
+                                        </constraints>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper covers rock! You win!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xln-ZP-9q0">
-                                        <rect key="frame" x="14.5" y="220" width="211" height="20.5"/>
+                                        <rect key="frame" x="14.5" y="205" width="211" height="35.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -140,6 +148,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aSo-4y-nHo"/>
                     </view>
+                    <connections>
+                        <outlet property="winnerImage" destination="x4b-8G-9OH" id="b4U-7b-Ls3"/>
+                        <outlet property="winnerLabel" destination="xln-ZP-9q0" id="aAz-9a-LpB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzj-K5-OFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -147,9 +159,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paper" width="75" height="65"/>
-        <image name="rock" width="75" height="65"/>
-        <image name="scissors" width="75" height="65"/>
+        <image name="paperIcon" width="75" height="65"/>
+        <image name="rockIcon" width="75" height="65"/>
+        <image name="scissorsIcon" width="75" height="65"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Bi9-BB-Tuw"/>

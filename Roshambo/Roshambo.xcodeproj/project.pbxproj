@@ -13,6 +13,7 @@
 		A7AC75FD1F6420AC00B2C0F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7AC75FB1F6420AC00B2C0F8 /* LaunchScreen.storyboard */; };
 		A7AC76091F6432B900B2C0F8 /* ChoosePlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC76081F6432B900B2C0F8 /* ChoosePlayerViewController.swift */; };
 		A7AC760B1F6432C700B2C0F8 /* BattleResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC760A1F6432C700B2C0F8 /* BattleResultViewController.swift */; };
+		A7AC760E1F64360C00B2C0F8 /* Roshambo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AC760D1F64360C00B2C0F8 /* Roshambo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		A7AC75FE1F6420AC00B2C0F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7AC76081F6432B900B2C0F8 /* ChoosePlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerViewController.swift; sourceTree = "<group>"; };
 		A7AC760A1F6432C700B2C0F8 /* BattleResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewController.swift; sourceTree = "<group>"; };
+		A7AC760D1F64360C00B2C0F8 /* Roshambo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roshambo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		A7AC75F11F6420AC00B2C0F8 /* Roshambo */ = {
 			isa = PBXGroup;
 			children = (
+				A7AC760C1F6435F600B2C0F8 /* Model */,
 				A7AC76061F64329A00B2C0F8 /* Views */,
 				A7AC76051F6421CD00B2C0F8 /* Assets */,
 				A7AC76041F6421C000B2C0F8 /* Storyboards */,
@@ -97,6 +100,14 @@
 				A7AC760A1F6432C700B2C0F8 /* BattleResultViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A7AC760C1F6435F600B2C0F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A7AC760D1F64360C00B2C0F8 /* Roshambo.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7AC760E1F64360C00B2C0F8 /* Roshambo.swift in Sources */,
 				A7AC76091F6432B900B2C0F8 /* ChoosePlayerViewController.swift in Sources */,
 				A7AC75F31F6420AC00B2C0F8 /* AppDelegate.swift in Sources */,
 				A7AC760B1F6432C700B2C0F8 /* BattleResultViewController.swift in Sources */,

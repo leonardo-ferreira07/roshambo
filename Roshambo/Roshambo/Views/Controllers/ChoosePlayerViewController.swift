@@ -26,9 +26,14 @@ class ChoosePlayerViewController: UIViewController {
     
     @IBAction func rockButtonPressed(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let resultVC = storyboard.instantiateViewController(withIdentifier: "BattleResultViewController")
+        if let resultVC = storyboard.instantiateViewController(withIdentifier: "BattleResultViewController") as? BattleResultViewController {
+            let tupple = Roshambo.winnerMessage(with: Roshambo.generateRandomPlayer(), playerB: .rock)
+            
+            resultVC.winnerMessage = tupple.0
+            resultVC.winnerImageName = tupple.1
         
-        present(resultVC, animated: true, completion: nil)
+            present(resultVC, animated: true, completion: nil)
+        }
     }
     
     @IBAction func paperButtonPressed(_ sender: UIButton) {

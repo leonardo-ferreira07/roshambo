@@ -9,16 +9,23 @@
 import UIKit
 
 class BattleResultViewController: UIViewController {
-
+    
+    @IBOutlet weak var winnerImage: UIImageView!
+    @IBOutlet weak var winnerLabel: UILabel!
+    
+    var winnerMessage: String!
+    var winnerImageName: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        winnerLabel.text = winnerMessage
+        winnerImage.image = UIImage(named: winnerImageName)
     }
     
 
