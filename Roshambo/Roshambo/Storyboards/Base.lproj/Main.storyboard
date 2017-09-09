@@ -73,6 +73,62 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="eUV-u4-yWm">
+            <objects>
+                <viewController id="NDy-2l-GAH" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mrR-Si-nbf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="oy5-WK-Fxb">
+                                <rect key="frame" x="67.5" y="236.5" width="240" height="240.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4b-8G-9OH">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="150"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper covers rock! You win!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xln-ZP-9q0">
+                                        <rect key="frame" x="14.5" y="220" width="211" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240.5" id="BSr-J9-EVA"/>
+                                    <constraint firstAttribute="width" constant="240" id="U7L-NX-JBo"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pAN-BK-fxU">
+                                <rect key="frame" x="152" y="617" width="71" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVH-sm-XPM">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="40"/>
+                                        <state key="normal" title="Play Again"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="P04-qH-CIi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pAN-BK-fxU" firstAttribute="top" secondItem="oy5-WK-Fxb" secondAttribute="bottom" priority="750" constant="140" id="1hB-VS-1eW"/>
+                            <constraint firstItem="oy5-WK-Fxb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aSo-4y-nHo" secondAttribute="top" constant="30" id="5MF-Ra-Md1"/>
+                            <constraint firstItem="pAN-BK-fxU" firstAttribute="centerX" secondItem="mrR-Si-nbf" secondAttribute="centerX" id="Q1Q-g3-yAE"/>
+                            <constraint firstItem="aSo-4y-nHo" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="pAN-BK-fxU" secondAttribute="bottom" constant="100" id="Yr7-jg-U62"/>
+                            <constraint firstItem="oy5-WK-Fxb" firstAttribute="centerX" secondItem="mrR-Si-nbf" secondAttribute="centerX" id="i89-6S-pjF"/>
+                            <constraint firstItem="pAN-BK-fxU" firstAttribute="top" relation="lessThanOrEqual" secondItem="oy5-WK-Fxb" secondAttribute="bottom" constant="140" id="u5U-Bg-rIb"/>
+                            <constraint firstItem="aSo-4y-nHo" firstAttribute="bottom" secondItem="pAN-BK-fxU" secondAttribute="bottom" constant="10" id="ugh-fM-Wvz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aSo-4y-nHo"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzj-K5-OFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="42"/>
+        </scene>
     </scenes>
     <resources>
         <image name="paper" width="75" height="65"/>
